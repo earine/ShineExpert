@@ -10,6 +10,9 @@
 		9C03114B2153E90700A8139C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C03114A2153E90700A8139C /* SWRevealViewController.m */; };
 		9C03114F2153F30B00A8139C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03114E2153F30B00A8139C /* ProfileViewController.swift */; };
 		9C0311512153FBB400A8139C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0311502153FBB400A8139C /* Images.xcassets */; };
+		9C031155215420CC00A8139C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031154215420CC00A8139C /* User.swift */; };
+		9C0311572154226300A8139C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0311562154226300A8139C /* Car.swift */; };
+		9C03115A2155092A00A8139C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0311592155092A00A8139C /* Service.swift */; };
 		9C8D027421500087005F8F57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D027321500087005F8F57 /* AppDelegate.swift */; };
 		9C8D027621500087005F8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D027521500087005F8F57 /* LoginViewController.swift */; };
 		9C8D027921500087005F8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D027721500087005F8F57 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 		9C03114A2153E90700A8139C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		9C03114E2153F30B00A8139C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9C0311502153FBB400A8139C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C031154215420CC00A8139C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9C0311562154226300A8139C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
+		9C0311592155092A00A8139C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		9C8D027021500087005F8F57 /* ShineExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShineExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8D027321500087005F8F57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C8D027521500087005F8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +62,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9C0311522154209E00A8139C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C03114E2153F30B00A8139C /* ProfileViewController.swift */,
+				9C8D027521500087005F8F57 /* LoginViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C031153215420B200A8139C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C031154215420CC00A8139C /* User.swift */,
+				9C0311592155092A00A8139C /* Service.swift */,
+				9C0311562154226300A8139C /* Car.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C0311582154231400A8139C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				9C0311492153E90700A8139C /* SWRevealViewController.h */,
+				9C03114A2153E90700A8139C /* SWRevealViewController.m */,
+				9CB865962152D49D00106CBE /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		9C8D026721500087005F8F57 = {
 			isa = PBXGroup;
 			children = (
@@ -78,15 +113,13 @@
 			isa = PBXGroup;
 			children = (
 				9C8D027321500087005F8F57 /* AppDelegate.swift */,
-				9C8D027521500087005F8F57 /* LoginViewController.swift */,
+				9C031153215420B200A8139C /* Model */,
 				9C8D027721500087005F8F57 /* Main.storyboard */,
-				9C03114E2153F30B00A8139C /* ProfileViewController.swift */,
-				9CB865962152D49D00106CBE /* Extensions.swift */,
+				9C0311522154209E00A8139C /* Controller */,
 				9C8D027C21500089005F8F57 /* LaunchScreen.storyboard */,
 				9C8D027F21500089005F8F57 /* Info.plist */,
-				9C0311492153E90700A8139C /* SWRevealViewController.h */,
-				9C03114A2153E90700A8139C /* SWRevealViewController.m */,
 				9C0311482153E90600A8139C /* ShineExpert-Bridging-Header.h */,
+				9C0311582154231400A8139C /* Extensions */,
 				9C0311502153FBB400A8139C /* Images.xcassets */,
 			);
 			path = ShineExpert;
@@ -196,9 +229,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C8D027621500087005F8F57 /* LoginViewController.swift in Sources */,
+				9C03115A2155092A00A8139C /* Service.swift in Sources */,
 				9CB865972152D49D00106CBE /* Extensions.swift in Sources */,
 				9C03114F2153F30B00A8139C /* ProfileViewController.swift in Sources */,
+				9C031155215420CC00A8139C /* User.swift in Sources */,
 				9C8D027421500087005F8F57 /* AppDelegate.swift in Sources */,
+				9C0311572154226300A8139C /* Car.swift in Sources */,
 				9C03114B2153E90700A8139C /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
