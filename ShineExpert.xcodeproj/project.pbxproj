@@ -13,6 +13,7 @@
 		9C031155215420CC00A8139C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C031154215420CC00A8139C /* User.swift */; };
 		9C0311572154226300A8139C /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0311562154226300A8139C /* Car.swift */; };
 		9C03115A2155092A00A8139C /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0311592155092A00A8139C /* Service.swift */; };
+		9C03115C2158ADC400A8139C /* NewOrderMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C03115B2158ADC400A8139C /* NewOrderMapViewController.swift */; };
 		9C8D027421500087005F8F57 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D027321500087005F8F57 /* AppDelegate.swift */; };
 		9C8D027621500087005F8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D027521500087005F8F57 /* LoginViewController.swift */; };
 		9C8D027921500087005F8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D027721500087005F8F57 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		9C031154215420CC00A8139C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9C0311562154226300A8139C /* Car.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		9C0311592155092A00A8139C /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		9C03115B2158ADC400A8139C /* NewOrderMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewOrderMapViewController.swift; sourceTree = "<group>"; };
 		9C8D027021500087005F8F57 /* ShineExpert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShineExpert.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C8D027321500087005F8F57 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C8D027521500087005F8F57 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 			children = (
 				9C03114E2153F30B00A8139C /* ProfileViewController.swift */,
 				9C8D027521500087005F8F57 /* LoginViewController.swift */,
+				9C03115B2158ADC400A8139C /* NewOrderMapViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 				9C8D026C21500087005F8F57 /* Sources */,
 				9C8D026D21500087005F8F57 /* Frameworks */,
 				9C8D026E21500087005F8F57 /* Resources */,
+				587DB664BEC2AF45A66E9B69 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +207,28 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		587DB664BEC2AF45A66E9B69 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlacePicker/Frameworks/GooglePlacePicker.framework/Resources/GooglePlacePicker.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlacePicker.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B3D70BB99B4A689AFBCEFF9C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +258,7 @@
 				9C03115A2155092A00A8139C /* Service.swift in Sources */,
 				9CB865972152D49D00106CBE /* Extensions.swift in Sources */,
 				9C03114F2153F30B00A8139C /* ProfileViewController.swift in Sources */,
+				9C03115C2158ADC400A8139C /* NewOrderMapViewController.swift in Sources */,
 				9C031155215420CC00A8139C /* User.swift in Sources */,
 				9C8D027421500087005F8F57 /* AppDelegate.swift in Sources */,
 				9C0311572154226300A8139C /* Car.swift in Sources */,

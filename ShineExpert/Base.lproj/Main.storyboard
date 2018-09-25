@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qn6-jp-DtC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Bs1-m9-zbW">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -303,6 +303,38 @@
             </objects>
             <point key="canvasLocation" x="1302" y="161"/>
         </scene>
+        <!--New Order Map View Controller-->
+        <scene sceneID="ucs-9Y-mol">
+            <objects>
+                <viewController id="Bs1-m9-zbW" customClass="NewOrderMapViewController" customModule="ShineExpert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VVk-tt-bxw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bBC-1k-ltp" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="60" width="375" height="474"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78c-5h-wfB" customClass="GMSMapView">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="kfz-ZB-nLD"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="bBC-1k-ltp" id="llV-QV-phu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kqF-hi-C9K" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2704.8000000000002" y="358.4707646176912"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="lO7-TM-fUr">
             <objects>
@@ -323,11 +355,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="menu-2" width="24" height="24"/>
+        <image name="menu-2" width="19.200000762939453" height="19.200000762939453"/>
         <image name="profile-1" width="3500" height="2364"/>
         <image name="whiteshine expert" width="4167" height="4167"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eK0-P8-fpu"/>
+        <segue reference="asd-QZ-qRU"/>
     </inferredMetricsTieBreakers>
 </document>
