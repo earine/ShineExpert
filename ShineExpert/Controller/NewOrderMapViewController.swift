@@ -22,8 +22,9 @@ class NewOrderMapViewController: UIViewController  {
 
     @IBOutlet weak var mapView: GMSMapView!
     
+    @IBOutlet weak var menuButton: UIBarButtonItem!
+    
     var marker: GMSMarker?
-    var markerCoordinate: CLLocationCoordinate2D?
     
     // A default location to use when location permission is not granted.
     let defaultLocation = CLLocation(latitude: -33.869405, longitude: 151.199)
@@ -32,13 +33,12 @@ class NewOrderMapViewController: UIViewController  {
         super.viewDidLoad()
         self.mapView.delegate = self
         loadMap()
-        print("\(markerCoordinate)")
-
+        sideMenu()
+        
     }
     
     
     func loadMap() {
-        // Initialize the location manager.
         locationManager = CLLocationManager()
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
@@ -56,46 +56,23 @@ class NewOrderMapViewController: UIViewController  {
         mapView.isMyLocationEnabled = true
         mapView?.animate(to: camera)
     }
-}
 
-
-
-extension NewOrderMapViewController: GMSMapViewDelegate {
-    func mapView(_ mapView: GMSMapView, didLongPressAt coordinate: CLLocationCoordinate2D) {
-        // Custom logic here
-        mapView.clear()
-        let marker = GMSMarker()
-        marker.position = coordinate
-    
-        markerCoordinate = coordinate
-        marker.map = mapView
-    }
-}
-
-
-
-// Delegates to handle events for the location manager.
-extension NewOrderMapViewController: CLLocationManagerDelegate {
-    
-    func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        
-        guard status == .authorizedWhenInUse else {
-            return
+    func sideMenu() {
+        if revealViewController != nil {
+            menuButton.target = revealViewController()
+            menuButton.action = #selector(SWRevealViewController.revealToggle(_:))
+            revealViewController()?.rearViewRevealWidth = 250
+            view.addGestureRecognizer((self.revealViewController()?.panGestureRecognizer())!)
         }
-        
-        locationManager.startUpdatingLocation()
-        
-        mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
+        makeBarTransparent()
     }
     
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.first else {
-            return
-        }
-        
-        mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
-        
-        locationManager.stopUpdatingLocation()
+    func makeBarTransparent() {
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
     }
+
 }
+

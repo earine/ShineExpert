@@ -15,7 +15,6 @@ class User: NSObject {
     var email : String?
     var phoneNumber : Int?
     
-    
     var rating : Double?
     var totalDays : Int?
     var totalIncome : Int?
