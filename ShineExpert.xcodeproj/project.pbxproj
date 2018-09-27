@@ -19,6 +19,7 @@
 		9C8D027621500087005F8F57 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C8D027521500087005F8F57 /* LoginViewController.swift */; };
 		9C8D027921500087005F8F57 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D027721500087005F8F57 /* Main.storyboard */; };
 		9C8D027E21500089005F8F57 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C8D027C21500089005F8F57 /* LaunchScreen.storyboard */; };
+		9C98FE80215D5A6B00D64A51 /* AddAutoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C98FE7F215D5A6B00D64A51 /* AddAutoViewController.swift */; };
 		9CB865972152D49D00106CBE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB865962152D49D00106CBE /* Extensions.swift */; };
 		FD6EB527C364B02AFFEAD18A /* Pods_ShineExpert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE33FB89109ACCDD381B12D0 /* Pods_ShineExpert.framework */; };
 /* End PBXBuildFile section */
@@ -40,6 +41,7 @@
 		9C8D027821500087005F8F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C8D027D21500089005F8F57 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C8D027F21500089005F8F57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C98FE7F215D5A6B00D64A51 /* AddAutoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAutoViewController.swift; sourceTree = "<group>"; };
 		9CB865962152D49D00106CBE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BAE519F7FFFC06C21C604CB2 /* Pods-ShineExpert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShineExpert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert.debug.xcconfig"; sourceTree = "<group>"; };
 		DE33FB89109ACCDD381B12D0 /* Pods_ShineExpert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShineExpert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +75,7 @@
 				9C30A196215B7313000C954B /* RegistrationViewController.swift */,
 				9C03114E2153F30B00A8139C /* ProfileViewController.swift */,
 				9C03115B2158ADC400A8139C /* NewOrderMapViewController.swift */,
+				9C98FE7F215D5A6B00D64A51 /* AddAutoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 				9C8D026D21500087005F8F57 /* Frameworks */,
 				9C8D026E21500087005F8F57 /* Resources */,
 				587DB664BEC2AF45A66E9B69 /* [CP] Copy Pods Resources */,
+				9BC36D8A4D336748C3E089ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -232,6 +236,26 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		9BC36D8A4D336748C3E089ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
+				"${BUILT_PRODUCTS_DIR}/SkyFloatingLabelTextField/SkyFloatingLabelTextField.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SkyFloatingLabelTextField.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ShineExpert/Pods-ShineExpert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B3D70BB99B4A689AFBCEFF9C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -267,6 +291,7 @@
 				9C8D027421500087005F8F57 /* AppDelegate.swift in Sources */,
 				9C0311572154226300A8139C /* Car.swift in Sources */,
 				9C03114B2153E90700A8139C /* SWRevealViewController.m in Sources */,
+				9C98FE80215D5A6B00D64A51 /* AddAutoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

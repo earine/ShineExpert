@@ -11,11 +11,11 @@ import MapKit
 import CoreLocation
 import GooglePlaces
 import GoogleMaps
+import MaterialComponents
 
 class BorderedButton: UIButton {
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         layer.borderWidth = 2
     }
     
@@ -26,18 +26,18 @@ class BorderedButton: UIButton {
     }
     
 }
-
-
-class PlaceHolderColor: UITextField {
-    @IBInspectable var placeHolderColor: UIColor? {
-        get {
-            return self.placeHolderColor
-        }
-        set {
-            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
-        }
-}
-}
+//
+//
+//class PlaceHolderColor: UITextField {
+//    @IBInspectable var placeHolderColor: UIColor? {
+//        get {
+//            return self.placeHolderColor
+//        }
+//        set {
+//            self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedStringKey.foregroundColor: newValue!])
+//        }
+//}
+//}
 
 extension UILabel {
     func halfTextColorChange (fullText : String , changeText : String ) {

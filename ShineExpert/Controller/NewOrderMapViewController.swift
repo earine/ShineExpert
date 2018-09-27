@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 import GooglePlaces
 import GoogleMaps
-
+//import MaterialComponents/ShadowElevation
 
 class NewOrderMapViewController: UIViewController  {
 
@@ -19,11 +19,12 @@ class NewOrderMapViewController: UIViewController  {
     var currentLocation: CLLocation?
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
-
     @IBOutlet weak var mapView: GMSMapView!
     
+    @IBOutlet weak var addCarButton: UIButton!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
+   // @IBOutlet weak var bottomView: ShadowedView!
     var marker: GMSMarker?
     
     // A default location to use when location permission is not granted.
@@ -32,9 +33,10 @@ class NewOrderMapViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.mapView.delegate = self
+       // bottomView.setDefaultElevation()
         loadMap()
         sideMenu()
-        
+
     }
     
     
@@ -76,3 +78,19 @@ class NewOrderMapViewController: UIViewController  {
 
 }
 
+
+//class ShadowedView: UIView {
+//
+//    override class var layerClass: AnyClass {
+//        return MDCShadowLayer.self
+//    }
+//
+//    var shadowLayer: MDCShadowLayer {
+//        return self.layer as! MDCShadowLayer
+//    }
+//
+//    func setDefaultElevation() {
+//        self.shadowLayer.elevation = ShadowElevation.cardResting
+//    }
+//
+//}
