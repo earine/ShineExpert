@@ -15,6 +15,10 @@ class User: NSObject {
     var email : String?
     var phoneNumber : Int?
     
+    var cars: [Car] = []
+    
+    var role: String?
+    
     var rating : Double?
     var totalDays : Int?
     var totalIncome : Int?
@@ -22,4 +26,10 @@ class User: NSObject {
     var totalWashedCars : Int?
     var todaysWashedCars : Int?
     
+    func setCar(cars: [Car]) {
+        self.cars = [Car]()
+        for c in cars {
+            self.cars.append(Car(typeOfCar: c.typeOfCar, model: c.model, number: c.number, color: c.color))
+        }
+    }
 }

@@ -13,14 +13,17 @@ import GooglePlaces
 import GoogleMaps
 //import MaterialComponents/ShadowElevation
 
+var user = User()
 class NewOrderMapViewController: UIViewController  {
 
+    
     var locationManager = CLLocationManager()
     var currentLocation: CLLocation?
     var placesClient: GMSPlacesClient!
     var zoomLevel: Float = 15.0
     @IBOutlet weak var mapView: GMSMapView!
     
+    @IBOutlet weak var carLabel: UILabel!
     @IBOutlet weak var addCarButton: UIButton!
     @IBOutlet weak var menuButton: UIBarButtonItem!
     
@@ -32,9 +35,11 @@ class NewOrderMapViewController: UIViewController  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.mapView.delegate = self
+      //  self.mapView.delegate = self
        // bottomView.setDefaultElevation()
+      
         loadMap()
+       getCarLabel()
         sideMenu()
 
     }
@@ -68,6 +73,19 @@ class NewOrderMapViewController: UIViewController  {
         }
         makeBarTransparent()
     }
+    
+    func getCarLabel() {
+        if (user.cars.isEmpty) {
+            carLabel.text = "нет авто"
+        } else {
+            for i in 0..<user.cars.count
+            {
+                carLabel.text = "\(user.cars[i].model) \(user.cars[i].number)"
+            }
+            }
+    }
+    
+    
     
     func makeBarTransparent() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)

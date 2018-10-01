@@ -9,7 +9,16 @@
 import UIKit
 
 class Car: NSObject {
-    var model : String?
-    var number : String?
-    var color : String?
+    var typeOfCar : String
+    var model : String
+    var number : String
+    var color : String
+
+    init(typeOfCar: String, model: String, number: String, color: String) {
+        self.typeOfCar = typeOfCar
+        self.model = model
+        self.number = number
+        self.color = color
+    }
 }
+
